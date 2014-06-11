@@ -1,5 +1,7 @@
 # piece-verification
 
+[![Build status](https://travis-ci.org/michaelrhodes/piece-verification.png?branch=master)](https://travis-ci.org/michaelrhodes/piece-verification)
+
 ## example
 ```js
 var http = require('http')
