@@ -1,21 +1,5 @@
 # piece-verification-stream
 
-## api
-```
-verify(
-
-  pieces (array[sha1_string, …] || buffer.concat[sha1_raw, …]) :
-    a collection of sha1 pieces
-
-  piece_length (number) :
-    the byte length that each piece represents
-
-  encoding (string) :
-   (optional) sha1 digest encoding used by pieces
-
-)
-```
-
 ## example
 ```js
 var http = require('http')
@@ -35,3 +19,21 @@ http.get('http://site.com/some-file.mp4', function(response) {
     .pipe(fs.createWriteStream('./some-file-saved.mp4'))
 })
 ```
+
+## api
+```
+verify(
+
+  pieces (array[sha1_string, …] || buffer.concat[sha1_raw, …]) :
+    a collection of sha1 pieces
+
+  piece_length (number) :
+    the byte length that each piece represents
+
+  encoding (string) :
+   (optional) sha1 digest encoding used by pieces
+
+)
+```
+
+
