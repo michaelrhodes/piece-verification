@@ -1,5 +1,21 @@
 # piece-verification-stream
 
+## api
+```
+verify(
+
+  pieces (array[sha1_string, …] || buffer.concat[sha1_raw, …]) :
+    a collection of sha1 pieces
+
+  piece_length (number) :
+    the byte length that each piece represents
+
+  encoding (string) :
+   (optional) sha1 digest encoding used by pieces
+
+)
+```
+
 ## example
 ```js
 var http = require('http')
