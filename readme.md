@@ -6,8 +6,8 @@ var http = require('http')
 var fs = require('fs')
 var verify = require('piece-verification-stream')
 
-// Where pieces can either be an array of sha1 strings
-// or a Buffer of concatenated binary sha1s.
+// The pieces argument can either be an array of SHA1 strings
+// or a Buffer of concatenated binary SHA1s.
 
 http.get('http://site.com/some-file.mp4')
   .pipe(verify(pieces, piece_length, 'hex'))
