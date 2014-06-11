@@ -34,9 +34,9 @@ module.exports = function(pieces, pieceLength, hashEncoding) {
       if (hash !== piece) {
         var similar = hash.length === piece.length
         this.emit('error', new Error(
-          piece ?
-            (similar ? 'Wrong piece' : 'Possible encoding mismatch') :
-            'Not enough pieces'
+          piece == null ? 'Not enough pieces' :
+            similar ? 'Wrong piece' :
+            'Encoding mismatch?'
         ))
       }
 
@@ -45,7 +45,9 @@ module.exports = function(pieces, pieceLength, hashEncoding) {
     },
     function flush() {
       if (pieces.length > index) {
-        this.emit('error', new Error('Too many pieces')) 
+        this.emit('error', new Error(
+          'Too many pieces'
+        )) 
       }
     }
   )
