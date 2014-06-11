@@ -1,10 +1,10 @@
-# piece-verification-stream
+# piece-verification
 
 ## example
 ```js
 var http = require('http')
 var fs = require('fs')
-var verify = require('piece-verification-stream')
+var verify = require('piece-verification')
 
 // The pieces argument can either be an array of SHA1 strings
 // or a Buffer of concatenated binary SHA1s.
@@ -22,7 +22,7 @@ http.get('http://site.com/some-file.mp4', function(response) {
 
 ## api
 ```
-verify(
+piece-verification(
 
   pieces (array[sha1_string, …] || buffer.concat[sha1_raw, …]) :
     a collection of sha1 pieces

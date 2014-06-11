@@ -1,5 +1,5 @@
 {
-  "name": "piece-verification-stream",
+  "name": "piece-verification",
   "version": "0.0.0",
   "description": "A through stream that checks data against an array of sha1 pieces.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:michaelrhodes/piece-verification-stream.git"
+    "url": "git@github.com:michaelrhodes/piece-verification.git"
   },
   "keywords": [
     "sha1",
@@ -19,9 +19,9 @@
   "author": "Michael Rhodes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/michaelrhodes/piece-verification-stream/issues"
+    "url": "https://github.com/michaelrhodes/piece-verification/issues"
   },
-  "homepage": "https://github.com/michaelrhodes/piece-verification-stream",
+  "homepage": "https://github.com/michaelrhodes/piece-verification",
   "dependencies": {
     "block-stream": "0.0.7",
     "stream-splicer": "^1.1.0",
