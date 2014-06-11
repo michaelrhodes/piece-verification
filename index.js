@@ -25,18 +25,20 @@ module.exports = function(pieces, pieceLength, hashEncoding) {
 
   var check = through(
     function transform(chunk, encoding, next) {
-      var piece = pieces[index++].toString()
+      var piece = pieces[index++]
+      piece = piece ? piece.toString() : null
+
       var hash = crypto.createHash('sha1')
         .update(chunk)
         .digest(hashEncoding)
         .toString()
 
       if (hash !== piece) {
-        var similar = hash.length === piece.length
-        this.emit('error', new Error(
-          piece == null ? 'Not enough pieces' :
+        var similar = piece && hash.length === piece.length
+        return this.emit('error', new Error(
+          !piece ? 'Not enough pieces' :
             similar ? 'Wrong piece' :
-            'Encoding mismatch?'
+            'Encoding mismatch'
         ))
       }
 
