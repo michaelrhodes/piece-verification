@@ -1,7 +1,7 @@
 {
   "name": "piece-verification",
   "version": "0.0.1",
-  "description": "A through stream that checks data against an array of sha1 pieces.",
+  "description": "A through stream that verifies data against a set of SHA1 pieces.",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"

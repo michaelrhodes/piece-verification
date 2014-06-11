@@ -1,5 +1,5 @@
 # piece-verification
-piece-verification is a through stream that verifies that a give piece of data matches a set of sha1 pieces. If the pieces don’t exactly match the input, an error will be emitted.
+piece-verification is a through stream that verifies data against a set of SHA1 pieces. If the pieces don’t exactly match, an error will be emitted.
 
 [![Build status](https://travis-ci.org/michaelrhodes/piece-verification.png?branch=master)](https://travis-ci.org/michaelrhodes/piece-verification)
 
